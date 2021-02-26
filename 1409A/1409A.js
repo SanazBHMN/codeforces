@@ -1,5 +1,3 @@
-obtainBFromA(15, 20);
-
 var testCase = +readline();
 
 function obtainBFromA(a, b) {
