@@ -24,10 +24,9 @@ for(var i = 0; i < n; i++) {
 if(t_1 !== 0 && t_2 !== 0 && t_3 !== 0){
     w = Math.min(t_1, t_2, t_3);
     print(w);
+	for(var j = 0; j < w; j++) {
+	print(index1[j], index2[j], index3[j]);
+}
 }else{
     print(0);
-}
-
-for(var j = 0; j < w; j++) {
-	print(index1[j], index2[j], index3[j]);
 }
