@@ -6,6 +6,7 @@ var t_3 = 0;
 var index1 = [];
 var index2 = [];
 var index3 = [];
+var w = 0;
 
 for(var i = 0; i < n; i++) {
     if(t[i] === 1){
@@ -19,13 +20,14 @@ for(var i = 0; i < n; i++) {
         t_3++;
     }
 }
-print(index1);
-print(index2);
-print(index3);
 
 if(t_1 !== 0 && t_2 !== 0 && t_3 !== 0){
-    print(Math.min(t_1, t_2, t_3));
-    
+    w = Math.min(t_1, t_2, t_3);
+    print(w);
 }else{
     print(0);
+}
+
+for(var j = 0; j < w; j++) {
+	print(index1[j], index2[j], index3[j]);
 }
