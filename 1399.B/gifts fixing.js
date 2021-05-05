@@ -1,5 +1,5 @@
 var t = +readline();
-
+ 
 for(var i = 0; i < t; i++) {
     var n = +readline();
     var a = readline().split(' ').map(Number); //candies
@@ -9,8 +9,8 @@ for(var i = 0; i < t; i++) {
     var min_b = Math.min(...b);
     var min_moves = 0;
     
-    for(var i = 0; i < n; i++) {
-        min_moves += Math.max((a[i] - min_a), (b[i] - min_b));
+    for(var j = 0; j < n; j++) {
+        min_moves += Math.max((a[j] - min_a), (b[j] - min_b));
     }
     
     print(min_moves);
