@@ -3,23 +3,15 @@ var t = +readline();
 while (t--) {
   var n = +readline();
   var weights = readline().split(" ").map(Number);
-  var sum_weights = weights.reduce((acc, item) => acc + item);
-  var ones = 0;
-  var twos = 0;
-  var sum = weights[0];
+  var arr = [0, 0];
+  var sum = 0;
 
-  for (var i = 0; i < n; i++) {
-    if (weights[i] === 1) {
-      ones++;
-    } else {
-      twos++;
-    }
+  for (var weight of weights) {
+    sum += weight;
+    arr[weight % 2] += 1;
   }
-  if (ones % 2) {
-    print("NO");
-    continue;
-  }
-  if (sum_weights % 4 && ones === 0) {
+  var ones = arr[1];
+  if (ones % 2 || (sum % 4 && !ones)) {
     print("NO");
     continue;
   }
