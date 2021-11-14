@@ -6,20 +6,16 @@ var result = [];
 
 for (var i = 0; i < m; i++) {
   var words = readline().split(" ");
-  dict[i] = [words[0], words[1]];
+  dict[words[0]] = words[1];
 }
 
 var lecture = readline().split(" ");
 
 for (var j = 0; j < n; j++) {
-  for (var key in dict) {
-    if (dict[key].includes(lecture[j])) {
-      if (dict[key][0].length <= dict[key][1].length) {
-        result.push(dict[key][0]);
-      } else {
-        result.push(dict[key][1]);
-      }
-    }
+  if (lecture[j].length <= dict[lecture[j]].length) {
+    result.push(lecture[j]);
+  } else {
+    result.push(dict[lecture[j]]);
   }
 }
 
