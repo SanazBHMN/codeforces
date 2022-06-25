@@ -1,16 +1,11 @@
-var word = "supercalifragilisticexpialidocious";
-console.log(word.length);
+var n = +readline();
 
-if (word.length < 10) {
-  console.log(word);
-} else {
-  var newWordArray = [];
-  newWordArray.push(word.length-2);
+for (var i = 0; i < n; i++) {
+  var word = readline();
 
-  newWordArray.unshift(word.charAt(0));
-  newWordArray.push(word.charAt(word.length - 1));
-  console.log(newWordArray);
-  newWordArray = newWordArray.join('');
-  // join() returns a new string
-  console.log(newWordArray);
+  if (word.length > 10) {
+    print(word[0] + (word.length - 2) + word[word.length - 1]);
+  } else {
+    print(word);
+  }
 }
